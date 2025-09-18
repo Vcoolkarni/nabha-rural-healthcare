@@ -45,7 +45,7 @@ function HomeInner() {
             <LangSelector />
             <a
               href="/dashboard"
-              className="inline-flex items-center rounded-md bg-foreground px-3 py-1.5 text-sm text-background"
+              className="inline-flex items-center rounded-md bg-primary px-3 py-1.5 text-sm text-primary-foreground transition-transform transition-shadow duration-200 hover:shadow-md active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {t("view_dashboard")}
             </a>
@@ -71,6 +71,40 @@ function HomeInner() {
           <MedicineAvailability />
         </section>
 
+        {/* Illustrations section */}
+        <section className="rounded-lg border p-4 sm:p-6">
+          <h3 className="text-base font-semibold">Healthcare around you</h3>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Nearby hospitals, pharmacies, and maps to help you navigate care.
+          </p>
+          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="group overflow-hidden rounded-lg border bg-card p-3">
+              <img
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/07bc09ee-0be9-4175-a935-a40eb51406d7/generated_images/clean-flat-2d-vector-illustration-of-a-s-d516fef3-20250918095153.jpg?"
+                alt="Medical store illustration"
+                className="h-40 w-full rounded-md object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+              <div className="mt-2 text-sm font-medium">Medical Store</div>
+            </div>
+            <div className="group overflow-hidden rounded-lg border bg-card p-3">
+              <img
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/07bc09ee-0be9-4175-a935-a40eb51406d7/generated_images/clean-flat-2d-vector-illustration-of-a-h-28cc40ee-20250918095159.jpg?"
+                alt="Hospital illustration"
+                className="h-40 w-full rounded-md object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+              <div className="mt-2 text-sm font-medium">Hospital</div>
+            </div>
+            <div className="group overflow-hidden rounded-lg border bg-card p-3">
+              <img
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/07bc09ee-0be9-4175-a935-a40eb51406d7/generated_images/clean-flat-2d-vector-illustration-of-a-s-0d7e4df7-20250918095206.jpg?"
+                alt="Map/location illustration"
+                className="h-40 w-full rounded-md object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+              <div className="mt-2 text-sm font-medium">Maps & Directions</div>
+            </div>
+          </div>
+        </section>
+
         <section className="rounded-lg border p-4 sm:p-6">
           <h3 className="font-medium">{t("dashboard")}</h3>
           <p className="mt-1 text-sm text-muted-foreground">
@@ -79,7 +113,7 @@ function HomeInner() {
           <div className="mt-3">
             <a
               href="/dashboard"
-              className="inline-flex items-center rounded-md border px-3 py-1.5 text-sm"
+              className="inline-flex items-center rounded-md border border-primary px-3 py-1.5 text-sm text-primary transition-transform transition-shadow duration-200 hover:bg-primary/10 hover:shadow-sm active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {t("view_dashboard")}
             </a>
